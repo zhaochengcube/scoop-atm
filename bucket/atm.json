@@ -5,8 +5,7 @@
   "checkver": "github",
   "description": "Augment Token Manager - Token management tool for Augment Code",
   "shortcuts": [
-    "ATM.exe",
-    "ATM"
+    ["ATM.exe", "ATM"]
   ],
   "autoupdate": {
     "url": "https://github.com/zhaochengcube/augment-token-mng/releases/download/v$version/ATM.exe"
