@@ -10,5 +10,7 @@
   "license": "MIT",
   "checkver": "github",
   "hash": "cc40e23d8051a95dfb1fee3f446d8a933b302ffd0045fd2ee4842b756a0498e0",
-  "shortcuts": [["ATM.exe","ATM"]]
+  "shortcuts": [
+    ["ATM.exe", "ATM"]
+  ]
 }
