@@ -1,0 +1,92 @@
+name: Update ATM Manifest
+
+on:
+  repository_dispatch:
+    types: [atm_release]
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: "Release tag (e.g. v0.5.2)"
+        required: true
+        type: string
+
+permissions:
+  contents: write
+
+jobs:
+  update:
+    runs-on: windows-latest
+    env:
+      REPO_OWNER: zhaochengcube
+      MAIN_REPO: augment-token-mng
+    steps:
+      - name: Checkout bucket repo
+        uses: actions/checkout@v4
+
+      - name: Resolve tag and version
+        shell: pwsh
+        run: |
+          if ("${{ github.event_name }}" -eq "repository_dispatch") {
+            $TAG = "${{ github.event.client_payload.tag }}"
+          } else {
+            $TAG = "${{ inputs.tag }}"
+          }
+
+          if ([string]::IsNullOrEmpty($TAG)) {
+            Write-Error "TAG is required"
+            exit 1
+          }
+
+          $VERSION = $TAG -replace '^v', ''
+          $URL = "https://github.com/$env:REPO_OWNER/$env:MAIN_REPO/releases/download/$TAG/ATM.exe"
+
+          echo "TAG=$TAG" >> $env:GITHUB_ENV
+          echo "VERSION=$VERSION" >> $env:GITHUB_ENV
+          echo "URL=$URL" >> $env:GITHUB_ENV
+
+      - name: Download ATM.exe
+        shell: pwsh
+        run: |
+          Invoke-WebRequest -Uri $env:URL -OutFile "ATM.exe"
+
+      - name: Compute SHA256
+        shell: pwsh
+        run: |
+          $hash = (Get-FileHash -Path "ATM.exe" -Algorithm SHA256).Hash.ToLower()
+          echo "HASH=$hash" >> $env:GITHUB_ENV
+
+      - name: Update manifest file
+        shell: pwsh
+        run: |
+          $manifest = @{
+              version = $env:VERSION
+              description = "Augment Token Manager - Token management tool for Augment Code"
+              homepage = "https://github.com/zhaochengcube/augment-token-mng"
+              license = "MIT"
+              url = $env:URL
+              hash = $env:HASH
+              bin = "ATM.exe"
+              shortcuts = @(@("ATM.exe", "ATM"))
+              checkver = "github"
+              autoupdate = @{
+                  url = "https://github.com/zhaochengcube/augment-token-mng/releases/download/v`$version/ATM.exe"
+              }
+          }
+
+          $manifest | ConvertTo-Json -Depth 10 | Set-Content -Path "bucket/atm.json" -Encoding UTF8
+
+      - name: Commit and push
+        shell: pwsh
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add bucket/atm.json
+          
+          $status = git status --porcelain
+          if ([string]::IsNullOrEmpty($status)) {
+            Write-Host "No changes to commit."
+            exit 0
+          }
+          
+          git commit -m "chore(manifest): update atm to $env:VERSION"
+          git push
