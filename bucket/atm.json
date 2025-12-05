@@ -1,9 +1,4 @@
 {
-  "autoupdate": {
-    "url": "https://github.com/zhaochengcube/augment-token-mng/releases/download/v$version/ATM.exe"
-  },
-  "url": "https://github.com/zhaochengcube/augment-token-mng/releases/download/v1.3.5/ATM.exe",
-  "description": "Augment Token Manager - Token management tool for Augment Code",
   "shortcuts": [
     [
       "ATM.exe",
@@ -11,9 +6,14 @@
     ]
   ],
   "checkver": "github",
-  "license": "MIT",
   "bin": "ATM.exe",
+  "version": "1.3.6",
+  "hash": "78ae33848217cdcdccf7b8a6e94a4bcd5ec7439931db0642fd176cfbdf2af772",
   "homepage": "https://github.com/zhaochengcube/augment-token-mng",
-  "version": "1.3.5",
-  "hash": "14e8b84abf362131d177384ffed1dd95dea9435aa515291a45c8f6e13bc09f17"
+  "url": "https://github.com/zhaochengcube/augment-token-mng/releases/download/v1.3.6/ATM.exe",
+  "license": "MIT",
+  "description": "Augment Token Manager - Token management tool for Augment Code",
+  "autoupdate": {
+    "url": "https://github.com/zhaochengcube/augment-token-mng/releases/download/v$version/ATM.exe"
+  }
 }
