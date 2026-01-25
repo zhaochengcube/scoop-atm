@@ -1,19 +1,19 @@
 {
-  "license": "MIT",
-  "checkver": "github",
+  "hash": "ac79d75ffba5bccc502a1cabe26be8f8f0254f20e9ecebd919da68295f5a4aef",
   "bin": "ATM.exe",
+  "license": "MIT",
+  "version": "1.7.2",
   "homepage": "https://github.com/zhaochengcube/augment-token-mng",
-  "description": "Augment Token Manager - Token management tool for Augment Code",
-  "version": "1.7.1",
-  "url": "https://github.com/zhaochengcube/augment-token-mng/releases/download/v1.7.1/ATM.exe",
-  "hash": "7d85fe0d0e64df5262e66f9b6edb9ee64a9f37c8683b7efbf0b60c0a1471d5e5",
-  "autoupdate": {
-    "url": "https://github.com/zhaochengcube/augment-token-mng/releases/download/v$version/ATM.exe"
-  },
   "shortcuts": [
     [
       "ATM.exe",
       "ATM"
     ]
-  ]
+  ],
+  "autoupdate": {
+    "url": "https://github.com/zhaochengcube/augment-token-mng/releases/download/v$version/ATM.exe"
+  },
+  "url": "https://github.com/zhaochengcube/augment-token-mng/releases/download/v1.7.2/ATM.exe",
+  "checkver": "github",
+  "description": "Augment Token Manager - Token management tool for Augment Code"
 }
