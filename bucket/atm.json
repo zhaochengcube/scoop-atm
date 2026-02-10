@@ -1,12 +1,12 @@
 {
   "hash": "fa97cbf638836e6d853b372cf3a9a79f42300cc96a063b422b97831484f24ba6",
   "autoupdate": {
-    "url": "https://github.com/zhaochengcube/augment-token-mng/releases/download/v$version/ATM.exe"
+    "url": "https://github.com/cubezhao/augment-token-mng/releases/download/v$version/ATM.exe"
   },
-  "homepage": "https://github.com/zhaochengcube/augment-token-mng",
+  "homepage": "https://github.com/cubezhao/augment-token-mng",
   "checkver": "github",
   "license": "MIT",
-  "url": "https://github.com/zhaochengcube/augment-token-mng/releases/download/v1.8.5/ATM.exe",
+  "url": "https://github.com/cubezhao/augment-token-mng/releases/download/v1.8.5/ATM.exe",
   "shortcuts": [
     [
       "ATM.exe",
