@@ -17,7 +17,7 @@ jobs:
   update:
     runs-on: windows-latest
     env:
-      REPO_OWNER: zhaochengcube
+      REPO_OWNER: cubezhao
       MAIN_REPO: augment-token-mng
     steps:
       - name: Checkout bucket repo
@@ -61,7 +61,7 @@ jobs:
           $manifest = @{
               version = $env:VERSION
               description = "Augment Token Manager - Token management tool for Augment Code"
-              homepage = "https://github.com/zhaochengcube/augment-token-mng"
+              homepage = "https://github.com/cubezhao/augment-token-mng"
               license = "MIT"
               url = $env:URL
               hash = $env:HASH
@@ -69,7 +69,7 @@ jobs:
               shortcuts = @(,@("ATM.exe", "ATM"))
               checkver = "github"
               autoupdate = @{
-                  url = "https://github.com/zhaochengcube/augment-token-mng/releases/download/v`$version/ATM.exe"
+                  url = "https://github.com/cubezhao/augment-token-mng/releases/download/v`$version/ATM.exe"
               }
           }
 
