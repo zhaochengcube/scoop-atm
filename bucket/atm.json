@@ -3,17 +3,17 @@
   "autoupdate": {
     "url": "https://github.com/cubezhao/augment-token-mng/releases/download/v$version/ATM.exe"
   },
-  "bin": "ATM.exe",
-  "checkver": "github",
-  "hash": "9c4c01fae128726e4c5a21f96dd6024ccc288063b70f80f3c0449d3cef1964ec",
-  "url": "https://github.com/cubezhao/augment-token-mng/releases/download/v1.9.3/ATM.exe",
-  "description": "Augment Token Manager - Token management tool for Augment Code",
-  "version": "1.9.3",
-  "homepage": "https://github.com/cubezhao/augment-token-mng",
+  "url": "https://github.com/cubezhao/augment-token-mng/releases/download/v1.9.4/ATM.exe",
   "shortcuts": [
     [
       "ATM.exe",
       "ATM"
     ]
-  ]
+  ],
+  "hash": "7cdc64728c12edfae6d89ba349fb868861bd7279fd1734a99c8ef338ab51315d",
+  "checkver": "github",
+  "version": "1.9.4",
+  "bin": "ATM.exe",
+  "description": "Augment Token Manager - Token management tool for Augment Code",
+  "homepage": "https://github.com/cubezhao/augment-token-mng"
 }
