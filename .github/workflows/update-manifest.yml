@@ -18,7 +18,7 @@ jobs:
     runs-on: windows-latest
     env:
       REPO_OWNER: cubezhao
-      MAIN_REPO: augment-token-mng
+      MAIN_REPO: ai-tools-mng
     steps:
       - name: Checkout bucket repo
         uses: actions/checkout@v4
@@ -60,8 +60,8 @@ jobs:
         run: |
           $manifest = @{
               version = $env:VERSION
-              description = "Augment Token Manager - Token management tool for Augment Code"
-              homepage = "https://github.com/cubezhao/augment-token-mng"
+              description = "AI Tools Manager - Account management tool for AI Tools"
+              homepage = "https://github.com/cubezhao/ai-tools-mng"
               license = "MIT"
               url = $env:URL
               hash = $env:HASH
@@ -69,7 +69,7 @@ jobs:
               shortcuts = @(,@("ATM.exe", "ATM"))
               checkver = "github"
               autoupdate = @{
-                  url = "https://github.com/cubezhao/augment-token-mng/releases/download/v`$version/ATM.exe"
+                  url = "https://github.com/cubezhao/ai-tools-mng/releases/download/v`$version/ATM.exe"
               }
           }
 
