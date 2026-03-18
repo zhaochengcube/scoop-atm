@@ -2,7 +2,7 @@
   "license": "MIT",
   "version": "1.9.10",
   "bin": "ATM.exe",
-  "homepage": "https://github.com/cubezhao/augment-token-mng",
+  "homepage": "https://github.com/cubezhao/ai-tools-mng",
   "shortcuts": [
     [
       "ATM.exe",
@@ -10,10 +10,10 @@
     ]
   ],
   "hash": "b87bad708a01ea5b7591ed146ee629963bc46bc5772e7e49a163784fb368ebab",
-  "description": "Augment Token Manager - Token management tool for Augment Code",
+  "description": "AI Tools Manager - Account management tool for AI Tools",
   "autoupdate": {
-    "url": "https://github.com/cubezhao/augment-token-mng/releases/download/v$version/ATM.exe"
+    "url": "https://github.com/cubezhao/ai-tools-mng/releases/download/v$version/ATM.exe"
   },
   "checkver": "github",
-  "url": "https://github.com/cubezhao/augment-token-mng/releases/download/v1.9.10/ATM.exe"
+  "url": "https://github.com/cubezhao/ai-tools-mng/releases/download/v1.9.10/ATM.exe"
 }
