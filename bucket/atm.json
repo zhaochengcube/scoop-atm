@@ -1,19 +1,19 @@
 {
-  "url": "https://github.com/cubezhao/ai-tools-mng/releases/download/v1.9.11/ATM.exe",
+  "url": "https://github.com/cubezhao/ai-tools-mng/releases/download/v1.9.12/ATM.exe",
+  "homepage": "https://github.com/cubezhao/ai-tools-mng",
+  "hash": "c56f971cf9f253f8c339ec463835ffe1619ab85e2c982d57e2b08f041d610b94",
   "shortcuts": [
     [
       "ATM.exe",
       "ATM"
     ]
   ],
-  "checkver": "github",
-  "homepage": "https://github.com/cubezhao/ai-tools-mng",
-  "version": "1.9.11",
-  "hash": "a1f8ef512665f5628868aa158e7e92c0c517017eca226ad528e46d2290b29d5e",
+  "bin": "ATM.exe",
+  "license": "MIT",
   "autoupdate": {
     "url": "https://github.com/cubezhao/ai-tools-mng/releases/download/v$version/ATM.exe"
   },
-  "license": "MIT",
-  "bin": "ATM.exe",
-  "description": "AI Tools Manager - Account management tool for AI Tools"
+  "description": "AI Tools Manager - Account management tool for AI Tools",
+  "checkver": "github",
+  "version": "1.9.12"
 }
